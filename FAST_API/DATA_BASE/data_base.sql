@@ -3,7 +3,6 @@ use bse_table;
 
 CREATE TABLE IF NOT EXISTS `bse_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `deal_date` timestamp NULL DEFAULT NULL,
   `security_code` varchar(45) DEFAULT NULL,
   `security_name` varchar(45) DEFAULT NULL,
   `client_name` varchar(45) DEFAULT NULL,
