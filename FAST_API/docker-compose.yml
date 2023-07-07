@@ -1,0 +1,19 @@
+version: '3'
+services:
+  pythonapp:
+    build: ./app/
+    container_name: "core-api-container"
+    ports: 
+            - "8000:15400"
+    volumes: 
+            - ./app/:/app
+    depends_on:
+      - mysql
+
+  mysql:
+    build: ./DATA_BASE/
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
